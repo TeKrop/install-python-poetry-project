@@ -28,4 +28,5 @@ runs:
           poetry-version: ${{ inputs.poetry-version }}
 
       - name: Install dependencies using Poetry
+        shell: bash
         run: poetry config virtualenvs.create false && poetry install
